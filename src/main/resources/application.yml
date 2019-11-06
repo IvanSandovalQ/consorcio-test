@@ -1,0 +1,11 @@
+server:
+    port: 8090
+spring:
+    application:
+        name: ms-pharmacy-neg
+restTemplate:
+    timeout:
+        read: 5000
+        connection: 5000
+pathCommunesByRegion: "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones"
+pathGetPharmacyByCommune: "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones"
