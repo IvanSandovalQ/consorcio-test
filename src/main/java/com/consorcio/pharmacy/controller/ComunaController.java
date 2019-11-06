@@ -1,7 +1,6 @@
 package com.consorcio.pharmacy.controller;
 
-import com.consorcio.pharmacy.client.CommuneClientService;
-import com.consorcio.pharmacy.service.CommuneService;
+import com.consorcio.pharmacy.service.ComunaService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -9,26 +8,22 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class CommunesController {
+public class ComunaController {
 
-    private final CommuneService communeService;
+    private final ComunaService comunaService;
 
     /**
-     * Get Comunes By Region Id
+     * Obtener Comunas
      *
      * @see 'Metodo que obtiene una lista de comunas a travez del identificador
-     * de la region a traves de minsal, disponibilizando las comunas para fines
+     * de una region pre-determinada, este integra servicio de minsal, disponibilizando las comunas para fines
      * de filtro en la busqueda de farmacias'
      *
      * @author BCI
-     * @param regionId
      * @return ResponseEntity<List<String>>
      */
     @ApiOperation(
@@ -39,11 +34,10 @@ public class CommunesController {
             @ApiResponse(code = 400, message= "Error en los datos ingresados"),
             @ApiResponse(code = 500, message= "Error de servidor")})
     @GetMapping(
-            value = "/communes",
+            value = "/comunas",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getComunesByRegionId(@RequestParam int regionId) throws Exception {
-        return ResponseEntity.ok(this.communeService.getCommunesByRegionId(regionId));
+    public ResponseEntity<?> obtenerComunas() throws Exception {
+        return ResponseEntity.ok(this.comunaService.obtenerComunas());
     }
-
 
 }

@@ -1,9 +1,9 @@
 package com.consorcio.pharmacy.client;
 
-public interface CommuneClientService {
+public interface ComunaClientService {
 
     /**
-     * Get Communes
+     * Obtener Comunas
      *
      * @see 'Metodo que realiza busqueda de comunas por identificador de region
      * este se comunica con el servicio
@@ -12,8 +12,7 @@ public interface CommuneClientService {
      *
      * al cual le envia el codigo de region para obtener la lista esperada'
      *
-     * @param regionId 'Numero identificador de la region'
      * @return Lista de comunas de la region
      * */
-    String getCommunes(int regionId);
+    String obtenerComunas();
 }

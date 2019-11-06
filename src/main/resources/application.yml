@@ -8,4 +8,4 @@ restTemplate:
         read: 5000
         connection: 5000
 pathCommunesByRegion: "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones"
-pathGetPharmacyByCommune: "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones"
+pathGetPharmacyByCommune: "https://farmanet.minsal.cl/maps/index.php/ws/getLocalesRegion?id_region=7"
