@@ -1,2 +1,2 @@
-# consorcio-test
-prueba consorcio
+# ms-pharmacy-neg
+prueba farmacias
